@@ -6,8 +6,12 @@ const config = require('config')
 
 const Url = require('../models/Url')
 
-router.post('/shorten', async (req, res) => {
-    const { longUrl } = req.body
+router.get("/", (req, res) => {
+    res.render("index", { url: "" });
+});
+
+router.post('/', async (req, res) => {
+    const longUrl = req.body.longUrl;
     const baseUrl = config.get('baseUrl')
 
     if (!validUrl.isUri(baseUrl)) {
@@ -20,7 +24,7 @@ router.post('/shorten', async (req, res) => {
         try {
             let url = await Url.findOne({ longUrl })
             if (url) {
-                res.json(url)
+                res.render("index", { url: url });
             } else {
                 const shortUrl = baseUrl + '/' + urlCode
 
@@ -32,7 +36,8 @@ router.post('/shorten', async (req, res) => {
                 })
 
                 await url.save()
-                res.json(url)
+                res.render("index", { url: url })
+                console.log(res)
             }
         } catch (error) {
             console.error(error)

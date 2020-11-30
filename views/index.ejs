@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHORTER</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <img src="https://photos.app.goo.gl/EThjsz2Z3zfLNg9AA">
+    <form action="/api/url" method="POST" id="myForm">
+        <label for="url">
+            <h2>Paste the long URL</h2>
+            <input type="text" name="longUrl" size="75" required />
+        </label>
+        <button type="submit">Generate</button>
+    </form>
+
+    <h2>Copy the short URL</h2>
+    <input type="text" name="shortUrl" value="<%= url.shortUrl %>" size="50" id="shortUrl-input" />
+
+    <div class="tooltip">
+        <button onclick="myFunction()" onmouseout="outFunc()">
+            <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+            Copy text
+        </button>
+    </div>
+
+    <script>
+        // copy the text tooltip via W3 Schools.
+        function myFunction() {
+            var copyText = document.getElementById("shortUrl-input");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+            var tooltip = document.getElementById("myTooltip");
+            tooltip.innerHTML = "Copied: " + copyText.value;
+        }
+        function outFunc() {
+            var tooltip = document.getElementById("myTooltip");
+            tooltip.innerHTML = "Copy to clipboard";
+        }
+    </script>
+</body>
+
+</html>
