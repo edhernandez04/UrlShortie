@@ -1,6 +1,7 @@
 body {
+    text-align: center;
     margin: 20px;
-    background-color: rgba(0, 139, 139, 0.2);
+    background-color: rgb(0, 0, 0);
     font-family:  Calibri;
 }
 .tooltip {
@@ -40,8 +41,12 @@ body {
 	opacity: 1;
 }
 
+img {
+    width: 65%;
+}
+
 input[type="text"] {
-	border: 2px solid #3e95db;
+	border: 2px solid #5caaeb;
 	outline: none;
 	border-radius: 5px;
     padding: 0.5rem;
@@ -49,12 +54,12 @@ input[type="text"] {
 }
 
 input[type=text]:focus {
-    border-color:  #113757;
+    border-color:  #000000;
 }
 
 
 button {
-    background: #2f4ad0;
+    background: #5c92f5;
     padding: 10px 16px;
     color: #fff;
     border: none;
@@ -63,6 +68,6 @@ button {
     box-shadow: 0 4px 3px -3px #555;
   }
   button:hover {
-    background-color: #5399e9;
+    background-color: #b85cee;
     box-shadow: none;
   }

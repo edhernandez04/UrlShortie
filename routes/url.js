@@ -37,7 +37,6 @@ router.post('/', async (req, res) => {
 
                 await url.save()
                 res.render("index", { url: url })
-                console.log(res)
             }
         } catch (error) {
             console.error(error)
