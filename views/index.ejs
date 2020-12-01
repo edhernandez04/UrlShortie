@@ -15,19 +15,13 @@
         src="https://lh3.googleusercontent.com/d2qBjskfJLK1JtftEM_mnsQ3Pytf32je3PMcHf_rxlpVlwJzx1cts0_Z_fp75iZdxBJp4etDE0DMfQUF-E_1TPkHAvvbDtVheobgn3_72_tWvwfeUUwQtXacPgzPoiL82nLQfUkWyJFufzNslb6-NDKSjiK28VKFgMQE8ZKz0rCfgh_S1xqY3fqtbtbuLNrbGtu66ldcrAD5ErQRyAPuL0JKc9mQpLm3oYKBDQXy5-LTj921eIi4BptteFoLCxu-B1In7ADCLQ_VBu5_eMGjFeZismg6iFtY7MsCiGcoxNQmsdj9JYCHnmanvQo6WLRurFjTmYEl1hfX3xxAorEPTuVmRK7wAagBX-BNSzZl_UcLvz6om-bBsLIr5qse3-htGrf3dtA58DgMdKgA1fUK-FEX9MbMlPgRIOM88pH5cQdm0Db14ThrjonlQsCNstPbn0Jhtj9wQieETohXCJSBNBst9quwk887uPz5eByqDcvZMLr3exMSew5l3w_E16gFB-gpRxn6aQCuEzb9CI4HFyPNofJaT4vH_W5uAVesMoVnDuDoqzIpsGxRW_EWOAwDJc8fnW92YEJSfE5eGcuiiOZKEPGGvMn74OSvYKnAZdQ_WvQk_OAUeDudkWuc7IRnK685kwp4TgPghYzRVOKHkNe_J8pi_UdnkiydEyrotpHtrx4-CfBReELrmPxEsA=w1920-h1080-no?authuser=0">
     <form action="/api/url" method="POST" id="myForm">
         <label for="url">
-            <input type="text" name="longUrl" size="50" required />
+            <input type="text" name="longUrl" size="35%" required />
         </label>
-        <button type="submit">Generate</button>
+        <button type="submit">Shorter</button>
     </form>
 
-    <input type="text" name="shortUrl" value="<%= url.shortUrl %>" size="50" id="shortUrl-input" />
-
-    <div class="tooltip">
-        <button onclick="myFunction()" onmouseout="outFunc()">
-            <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
-            Copy text
-        </button>
-    </div>
+    <input type="text" name="shortUrl" value="<%= url.shortUrl %>" size="35%" id="shortUrl-input" />
+    <button onclick="myFunction()" onmouseout="outFunc()">Copy</button>
 
     <script>
         function myFunction() {

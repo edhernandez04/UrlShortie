@@ -59,6 +59,7 @@ input[type=text]:focus {
 
 
 button {
+    width: 5%;
     background: #5c92f5;
     padding: 10px 16px;
     color: #fff;
@@ -66,6 +67,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     box-shadow: 0 4px 3px -3px #555;
+    overflow: hidden;
   }
   button:hover {
     background-color: #b85cee;
